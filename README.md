@@ -92,7 +92,7 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - salut.exp.lucaconlaq.io
+        - foo.bar # your domain
       secretName: salut-tls
   rules:
     - host: foo.bar # your domain
