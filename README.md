@@ -2,6 +2,8 @@
 
 This project automates the deployment of a Kubernetes infrastructure on Google Cloud Platform (GCP) using Terraform. It includes the setup of a GKE cluster, DNS management with Google DNS, and the deployment of critical services such as cert-manager, ExternalDNS, and nginx-ingress using Helm.
 
+![Project Logo](.github/logo.png)
+
 ## Prerequisites
 
 - **Google Cloud Platform account**: Ensure you have access to a Google Cloud account with billing enabled.
@@ -117,8 +119,6 @@ This setup allows for the automatic assignment of a DNS record and HTTPS certifi
 - **Cert-Manager**: Deployed via Helm, manages certificates within the Kubernetes cluster.
 - **ExternalDNS**: Syncs services and ingress resources with the DNS provider to make them discoverable.
 - **Nginx Ingress**: An Ingress controller for Kubernetes providing HTTP and HTTPS routing.
-
-## Example
 
 ## Contributing
 
