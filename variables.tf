@@ -1,7 +1,6 @@
 variable "project_id" {
   description = "The unique identifier for the Google Cloud project."
   type        = string
-  default     = "cluster-414209"
 }
 
 variable "region" {
@@ -13,7 +12,6 @@ variable "region" {
 variable "dns_name" {
   description = "The DNS name for the managed zone."
   type        = string
-  default     = "cluster.lucaconlaq.io."
 }
 
 variable "cluster_node_count" {
