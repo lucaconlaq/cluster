@@ -16,13 +16,13 @@ This project automates the deployment of a Kubernetes infrastructure on Google C
 
 2. **Update Terraform Variables**: Modify the variables.tf file or create a terraform.tfvars file to set your project-specific values such as project_id, region, dns_name, etc. Ensure the values reflect your GCP project and infrastructure requirements.
 
-3. **Prepare for State Management**: Initially, comment out the content of the `state.tf` file to prevent Terraform from attempting to access the GCP bucket, fore it has been created. You can uncomment it later once the GCP bucket has been successfully created.
+3. **Initialize Terraform**: Run `terraform init` to initialize the Terraform workspace, which will download the required providers and initialize the backend.
 
-4. **Initialize Terraform**: Run `terraform init` to initialize the Terraform workspace, which will download the required providers and initialize the backend.
+4. **Apply the configuration**: Deploy the infrastructure with `terraform apply`. Confirm the action by typing `yes` when prompted.
 
-5. **Apply the configuration**: Deploy the infrastructure with `terraform apply`. Confirm the action by typing `yes` when prompted.
+5. **Update NS records at your registrar**: After the deployment, Terraform will output the NS (Name Server) records for your managed DNS zone. Log in to your domain registrar's control panel and update the NS records for your domain to point to these Google Cloud DNS name servers. This step is crucial for directing your domain's traffic to your new infrastructure.
 
-6. **Update NS records at your registrar**: After the deployment, Terraform will output the NS (Name Server) records for your managed DNS zone. Log in to your domain registrar's control panel and update the NS records for your domain to point to these Google Cloud DNS name servers. This step is crucial for directing your domain's traffic to your new infrastructure.
+6. **Configure Terraform Remote State Management (Optional)**: To leverage Terraform's remote state management capabilities, modify the state.tf file to configure the backend to use the Google Cloud Storage (GCS).
 
 ## Usage
 
