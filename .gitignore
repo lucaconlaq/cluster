@@ -34,3 +34,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 .terraform.lock.hcl
+
+# Ignore macOS metadata files
+.DS_Store
