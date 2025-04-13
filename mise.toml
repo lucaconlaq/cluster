@@ -1,0 +1,4 @@
+[tools]
+kubectl = "1.32.3"
+terraform = "1.11.4"
+gcloud = "517.0.0"

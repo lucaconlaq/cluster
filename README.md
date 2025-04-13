@@ -10,6 +10,12 @@ This project automates the deployment of a Kubernetes infrastructure on Google C
 - **Terraform, Helm, and Google Cloud CLI installed**: Make sure you have the latest versions of Terraform, Helm, and the `gcloud` CLI installed on your local machine.
 - **Customizable DNS**: Access to a DNS service where you can customize NS (Name Server) records to point to Google Cloud DNS.
 
+You can install everything using [Mise](https://github.com/jdx/mise).
+
+```
+mise install
+```
+
 ## Getting Started
 
 1. **Set up GCP credentials**: Ensure your GCP credentials are configured by running `gcloud auth application-default login`.
