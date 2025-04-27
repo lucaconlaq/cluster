@@ -1,8 +1,6 @@
-# An exemplary GKE setup with Terraform
+# An exemplary GKE setup with Terraform ⚓
 
 This project automates the deployment of a Kubernetes infrastructure on Google Cloud Platform (GCP) using Terraform. It includes the setup of a GKE cluster, DNS management with Google DNS, and the deployment of critical services such as cert-manager, ExternalDNS, and nginx-ingress using Helm.
-
-![Project Logo](.github/logo.png)
 
 ## Prerequisites
 
@@ -27,8 +25,6 @@ mise install
 4. **Apply the configuration**: Deploy the infrastructure with `terraform apply`. Confirm the action by typing `yes` when prompted.
 
 5. **Update NS records at your registrar**: After the deployment, Terraform will output the NS (Name Server) records for your managed DNS zone. Log in to your domain registrar's control panel and update the NS records for your domain to point to these Google Cloud DNS name servers. This step is crucial for directing your domain's traffic to your new infrastructure.
-
-6. **Configure Terraform Remote State Management (Optional)**: To leverage Terraform's remote state management capabilities, modify the state.tf file to configure the backend to use the Google Cloud Storage (GCS).
 
 ## Usage
 
