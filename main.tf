@@ -1,9 +1,3 @@
-resource "google_storage_bucket" "terraform" {
-  name     = "${var.project_id}-terraform"
-  location = var.region 
-  force_destroy = true 
-}
-
 resource "google_project_service" "container" {
   service = "container.googleapis.com"
     disable_dependent_services = true

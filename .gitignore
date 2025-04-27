@@ -39,3 +39,4 @@ terraform.rc
 .DS_Store
 
 mise.local.toml
+state.tf
