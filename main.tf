@@ -22,7 +22,11 @@ resource "google_service_account" "cluster" {
 
 resource "google_container_cluster" "main" {
   name     = "main"
-  location = "${var.cluster_location}" 
+  location = var.cluster_location 
+
+  workload_identity_config {
+    workload_pool = "${var.project_id}.svc.id.goog"
+  }
 
   node_pool {
     name       = "default"
@@ -34,6 +38,6 @@ resource "google_container_cluster" "main" {
     }
   }
 
-  depends_on = [google_project_service.container] 
+  depends_on = [google_project_service.container]
   deletion_protection = false
 }
