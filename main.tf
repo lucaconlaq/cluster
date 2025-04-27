@@ -35,6 +35,9 @@ resource "google_container_cluster" "main" {
     node_config {
       machine_type    = var.cluster_machine_type  
       service_account = google_service_account.cluster.email
+      workload_metadata_config {
+        mode = "GKE_METADATA"
+      }
     }
   }
 
