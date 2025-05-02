@@ -1,3 +1,9 @@
+resource "google_dns_managed_zone" "main" {
+  depends_on = [google_project_service.dns]
+  name     = "${trimsuffix(replace(trimspace(var.dns_name), ".", "-"), "-")}"
+  dns_name = var.dns_name
+}
+
 resource "google_service_account" "externaldns" {
   account_id   = "externaldns"
   display_name = "ExternalDNS Service Account"
