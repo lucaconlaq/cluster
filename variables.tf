@@ -41,15 +41,15 @@ variable "external_dns_chart_version" {
 
 variable "external_dns_image_tag" {
   description = "The version of the external-dns Docker image"
-  default     = "v0.14.0"
+  default     = "v0.16.1"
 }
 
 variable "nginx_ingress_chart_version" {
   description = "Version of the nginx-ingress Helm chart"
-  default     = "4.9.1"
+  default     = "4.12.2"
 }
 
 variable "cert_manager_chart_version" {
   description = "Version of the cert-manager Helm chart"
-  default = "v1.14.2"
+  default = "v1.17.2"
 }
